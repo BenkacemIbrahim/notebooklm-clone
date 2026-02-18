@@ -1,72 +1,117 @@
-# QUORRA - Your AI-Powered Research Partner
+# QUORRA
 
-<!-- Updated description to clarify this is a NotebookLM landing page clone -->
-A modern, responsive landing page clone of Google NotebookLM. QUORRA is an AI-powered research and thinking partner that helps you understand anything, grounded in the information you trust. Built with Next.js, React, and Tailwind CSS.
+QUORRA is a modern, responsive landing page for an AI-powered research workspace concept.
+It is built with Next.js App Router, TypeScript, and Tailwind CSS.
 
-## 🛠️ Tech Stack
+## Project Overview
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+This project showcases a product-style marketing experience for an AI research assistant that helps users:
 
-### Frontend Technologies
-- **Next.js 16** – React framework with App Router for optimal performance
-- **React 19** – Modern UI library with latest features
-- **TypeScript** – Type-safe development with enhanced IDE support
-- **Tailwind CSS v4** – Utility-first CSS framework with advanced features
+- upload and organize research sources
+- generate fast insights from mixed content
+- verify responses with clear citations
+- explore privacy-first AI workflows
 
-### Libraries & Frameworks
-- **shadcn/ui** – High-quality, accessible React components
-- **Google Fonts** – Typography (Inter, Helvetica)
-- **Vercel AI SDK** – Integration with Gemini models
-- **Responsive Design Tools** – Mobile-first approach
+## Live Product Positioning
 
-### Development Tools
-- **Git** – Version control
-- **VS Code** – Development environment
-- **TypeScript Compiler** – Type checking and compilation
-- **Tailwind CSS CLI** – Utility generation and optimization
+- Product name: `QUORRA`
+- One-line description: `An AI research workspace that turns scattered sources into trusted, structured insight.`
 
-### Performance & Optimization
-- **Server-Side Rendering** – Optimized initial page load
-- **Image Optimization** – Next.js Image component
-- **CSS Optimization** – Tailwind CSS purging
-- **Code Splitting** – Automatic route-based code splitting
+## Tech Stack
 
-## 🌟 Features
+- Next.js 15
+- React 18
+- TypeScript 5
+- Tailwind CSS 4
+- Lucide React (icons)
+- shadcn/ui button primitive (Radix Slot + CVA utility)
 
-### Core Functionality
-- **AI-Powered Research** – Leverage Gemini models for intelligent insights
-- **Responsive Design** – Optimized for desktop, tablet, and mobile devices
-- **Modern UI Components** – Built with shadcn/ui for consistency
-- **Hero Section** – Compelling call-to-action with engaging visuals
-- **Features Showcase** – Highlight key capabilities and benefits
-
-### User Experience
-- **Smooth Animations** – CSS3 and React-powered transitions
-- **Accessibility** – WCAG compliant with semantic HTML
-- **Fast Performance** – Optimized loading and rendering
-- **Professional Design** – Clean, modern aesthetic
-- **Mobile-First Approach** – Progressive enhancement for all devices
-
-### Technical Features
-- **Server Components** – Optimized data fetching and rendering
-- **Type Safety** – Full TypeScript support throughout
-- **SEO Optimized** – Semantic HTML and meta tags
-- **Cross-Browser Compatible** – Tested across modern browsers
-- **Environment Configuration** – Secure API key management
-
-## 🚀 Quick Start
+## Getting Started
 
 ### Prerequisites
-- Node.js 18 or higher
-- npm or yarn package manager
-- Modern web browser
+
+- Node.js `18.18.0` or newer
+- npm `9+` (npm `10+` recommended)
 
 ### Installation
 
-1. **Clone or download the project**
-   ```bash
-   git clone https://github.com/BenkacemIbrahim/notebooklm-clone.git
-   cd notebooklm-clone
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000` in your browser.
+
+## Scripts
+
+- `npm run dev` - run local development server
+- `npm run build` - create production build
+- `npm run start` - run production server
+- `npm run lint` - run ESLint
+- `npm run typecheck` - run TypeScript type checking
+- `npm run format` - check formatting with Prettier
+- `npm run format:write` - auto-format project files
+
+## Project Structure
+
+```text
+app/
+  globals.css
+  layout.tsx
+  page.tsx
+components/
+  footer.tsx
+  header.tsx
+  hero-section.tsx
+  features-section.tsx
+  privacy-section.tsx
+  use-cases-section.tsx
+  testimonials-section.tsx
+  ui/button.tsx
+lib/
+  utils.ts
+public/
+  *.png / *.jpg assets
+```
+
+## Engineering Standards
+
+- Strict TypeScript enabled
+- ESLint with Next.js core web vitals rules
+- Prettier formatting rules committed
+- GitHub CI workflow for linting, type checks, and build
+- Contributor, security, conduct, and changelog docs included
+
+## Accessibility and UX Notes
+
+- semantic sectioning and heading hierarchy
+- sticky navigation with in-page anchor links
+- responsive layout for mobile and desktop
+- image alt text added across the page
+
+## Deployment
+
+The project is deployment-ready for Vercel or any Node-compatible hosting provider:
+
+```bash
+npm run build
+npm run start
+```
+
+## Documentation Index
+
+- `CONTRIBUTING.md`
+- `CODE_OF_CONDUCT.md`
+- `SECURITY.md`
+- `CHANGELOG.md`
+- `docs/ARCHITECTURE.md`
+- `docs/LINKEDIN.md`
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE`.

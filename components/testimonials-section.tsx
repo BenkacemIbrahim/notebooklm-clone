@@ -1,58 +1,60 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 export function TestimonialsSection() {
   const testimonials = [
     {
       quote:
-        "It's possible that QUORRA podcast episode generation is touching on a whole new territory of really compelling LLM product formats. Feels reminiscent of ChatGPT. Maybe I'm overreacting.",
-      author: "Andrej Karpathy on X",
+        "QUORRA helped our team cut research prep time by more than half while keeping references organized.",
+      author: "Product Lead, SaaS Startup",
       avatar: "/diverse-group.png",
     },
     {
-      quote: "QUORRA Blew Our Mind",
-      author: "HardFork",
+      quote: "The audio summaries are excellent for quick context before deep reading.",
+      author: "Graduate Student",
       avatar: "/podcast-setup.png",
     },
     {
-      quote: "This could be the next killer app in generative AI",
-      author: "CNBC",
+      quote: "A clean, reliable workspace for turning messy inputs into a clear project narrative.",
+      author: "Strategy Consultant",
       avatar: "/news-collage.png",
     },
     {
-      quote: "QUORRA is a powerful tool that can help you work more efficiently",
-      author: "Harvard Business Review",
+      quote:
+        "I can ask questions against all of my source material and validate answers with citations instantly.",
+      author: "Research Analyst",
       avatar: "/business-meeting-diversity.png",
     },
     {
-      quote: "The audio overview feature is revolutionary for understanding complex documents",
-      author: "TechCrunch",
+      quote: "The UX is straightforward and works well across both desktop and mobile sessions.",
+      author: "Operations Manager",
       avatar: "/diverse-group.png",
     },
     {
-      quote: "Finally, an AI tool that actually understands context and nuance",
-      author: "The Verge",
+      quote: "This is the first AI research tool our whole team adopted without training.",
+      author: "Customer Success Director",
       avatar: "/podcast-setup.png",
     },
     {
-      quote: "QUORRA has transformed how we approach research and analysis",
-      author: "MIT Technology Review",
+      quote: "The generated outlines are practical, editable, and easy to share with stakeholders.",
+      author: "Founder, EdTech Company",
       avatar: "/news-collage.png",
     },
     {
-      quote: "The most intuitive AI research assistant I've ever used",
-      author: "Wired Magazine",
+      quote: "QUORRA is now our default workspace when preparing competitive intelligence reports.",
+      author: "Business Development Team",
       avatar: "/business-meeting-diversity.png",
     },
     {
-      quote: "Game-changing technology for students and researchers alike",
-      author: "Nature Journal",
+      quote: "Strong citation support gives us confidence in what we share externally.",
+      author: "Content Marketing Manager",
       avatar: "/diverse-group.png",
     },
     {
-      quote: "QUORRA makes complex information accessible to everyone",
-      author: "Scientific American",
+      quote: "The product feels polished and intentionally designed, not just another demo.",
+      author: "Design Engineer",
       avatar: "/podcast-setup.png",
     },
   ]
@@ -66,7 +68,10 @@ export function TestimonialsSection() {
 
     const scroll = () => {
       if (!isHovered) {
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+        if (
+          scrollContainer.scrollLeft >=
+          scrollContainer.scrollWidth - scrollContainer.clientWidth
+        ) {
           scrollContainer.scrollLeft = 0
         } else {
           scrollContainer.scrollLeft += 1
@@ -79,9 +84,11 @@ export function TestimonialsSection() {
   }, [isHovered])
 
   return (
-    <section className="px-8 py-20 bg-gray-50">
+    <section id="testimonials" className="bg-gray-50 px-6 py-20 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-normal text-center mb-20">What people are saying</h2>
+        <h2 className="text-4xl md:text-5xl font-normal text-center mb-20">
+          What people are saying
+        </h2>
 
         <div
           ref={scrollRef}
@@ -92,15 +99,19 @@ export function TestimonialsSection() {
         >
           {testimonials.map((testimonial, index) => (
             <div
-              key={index}
+              key={`${testimonial.author}-${index}`}
               className="bg-white rounded-lg p-16 shadow-sm w-[600px] h-[360px] flex-shrink-0 flex flex-col justify-between"
             >
-              <p className="text-gray-700 text-2xl leading-relaxed flex-1 overflow-hidden">"{testimonial.quote}"</p>
+              <p className="text-gray-700 text-2xl leading-relaxed flex-1 overflow-hidden">
+                &ldquo;{testimonial.quote}&rdquo;
+              </p>
               <div className="flex items-center gap-6 mt-10">
-                <img
-                  src={testimonial.avatar || "/placeholder.svg"}
+                <Image
+                  src={testimonial.avatar}
                   alt={testimonial.author}
-                  className="w-20 h-20 rounded-full"
+                  width={80}
+                  height={80}
+                  className="h-20 w-20 rounded-full"
                 />
                 <span className="text-2xl font-medium text-gray-900">{testimonial.author}</span>
               </div>

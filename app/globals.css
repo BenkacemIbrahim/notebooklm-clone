@@ -37,8 +37,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --font-google-sans: "Google Sans", sans-serif;
-  --font-helvetica: "Helvetica", sans-serif;
+  --font-google-sans: var(--font-manrope);
+  --font-body: var(--font-ibm-plex-sans);
 }
 
 .dark {
@@ -77,10 +77,9 @@
 }
 
 @theme inline {
-  /* Updated font variables to use Google Sans */
   --font-sans: var(--font-google-sans);
-  --font-mono: var(--font-google-sans);
-  --font-helvetica: var(--font-helvetica);
+  --font-mono: var(--font-body);
+  --font-helvetica: var(--font-body);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -127,12 +126,11 @@
     @apply bg-background text-foreground;
   }
 
-  /* Adding custom font classes */
   .font-google-sans {
-    font-family: var(--font-google-sans), sans-serif;
+    font-family: var(--font-google-sans), "Segoe UI", sans-serif;
   }
 
   .font-helvetica {
-    font-family: var(--font-helvetica), "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--font-body), "Segoe UI", sans-serif;
   }
 }
